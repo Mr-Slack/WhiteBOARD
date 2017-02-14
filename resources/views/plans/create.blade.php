@@ -11,7 +11,7 @@
     <div class="container">
       <div class="col-md-6">
         <label>予定日</label>
-        <input type="date" name="date" value="" class="form-control">
+        <input type="date" name="date" value="{{ Input::old('date') }}" class="form-control">
         <span class="help-block">{{ $errors->first('date') }}</span>
       </div>
     </div>
@@ -21,8 +21,8 @@
     <div class="container">
       <div class="col-md-6">
         <label>予定時間</label><br/>
-        開始時間:<input type="time" name="startTime" step="600">
-        終了時間：<input type="time" name="endTime" step="600">
+        開始時間:<input type="time" name="startTime" value="{{ Input::old('startTime') }}" step="600">
+        終了時間：<input type="time" name="endTime" value="{{ Input::old('endTime') }}" step="600">
         <span class="help-block">
           {{ $errors->first('startTime') }}
           @if(!empty($errors->first('startTime')))<br/>@endif
@@ -36,7 +36,7 @@
     <div class="container">
       <div class="col-md-6">
         <label>予定タイトル</label>
-        <input type="text" name="title" value="" class="form-control">
+        <input type="text" name="title" value="{{ Input::old('title') }}" class="form-control">
         <span class="help-block">{{ $errors->first('title') }}</span>
       </div>
     </div>
@@ -46,7 +46,7 @@
     <div class="container">
       <div class="col-md-8">
         <label>予定詳細</label>
-        <textarea name="body" value="" class="form-control" cols="20" rows="10"></textarea>
+        <textarea name="body" class="form-control" cols="20" rows="10">{{ Input::old('body') }}</textarea>
       </div>
     </div>
   </div>
