@@ -18,7 +18,6 @@
     "autoload": {
         "classmap": [
             "database",
-            "app/Models",
             "app/Http/Contollers"
         ],
         "psr-4": {
