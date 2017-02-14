@@ -18,10 +18,11 @@ $(function(){
   <div style="border: 5px double #0CF; padding: 10px;">
     <p>【課題】</p>
     <p>①laravelでサブクエリ</p>
-    <p>②フォームエラー時の入力項目の保持</p>→解決
+    <p>②フォームエラー時の入力項目の保持→解決</p>
     <p>③ログイン認証（ユーザー登録）</p>
-    <p>④同一社員の予定の表示（仕様）</p>
+    <p>④同一社員の予定の表示（仕様）→Viewにロジックを持たせる嫌な感じで一旦回避</p>
     <p>⑤帰社時間登録</p>
+    <p>⑥当日以外の予定表示</p>
   </div>
   <h1 class="text-primary">{{ $today }}</h1>
   @if(Session::get('flash_message'))
